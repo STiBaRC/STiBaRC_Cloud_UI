@@ -1,17 +1,26 @@
 var projects = JSON.parse('{ "p01": { "name": "Test Project 1", "active": true }, "p02": { "name":"Another Project", "active": true }, "p03": { "name":"Diffrent Project 3", "active": false } }');
 
-dropDown('dd1');
 loadTheme();
 
-function dropDown(id){
-    if(document.getElementById(id).style.display == "none"){
-        document.getElementById(id).style.display = "block";
+//drop down thing:
+var specifiedElement = document.getElementById('dd1btn');
+
+document.addEventListener("click", function(event) {
+    var isClickInside = specifiedElement.contains(event.target);
+    
+    if(document.getElementById("dd1").style.display == "none"){
+        document.getElementById("dd1").style.display = "block";
         document.getElementById("pfp").classList.add("active");
     }else{
-        document.getElementById(id).style.display = "none";
+        document.getElementById("dd1").style.display = "none";
         document.getElementById("pfp").classList.remove("active");
     }
-}
+    if (!isClickInside) {
+        //the click was outside the specifiedElement, do something
+        document.getElementById("dd1").style.display = "none";
+        document.getElementById("pfp").classList.remove("active");
+    }
+});
 
 function loadTheme() {
 	try {

@@ -86,6 +86,7 @@ body{
 .dropdown{
     display: inline-block;
     vertical-align: middle;
+    cursor: pointer;
 }
 .dropdown-content{
     display: none;
