@@ -1,10 +1,13 @@
 try {
-        document.getElementById("themechng").value = localStorage.getItem("theme");
-        document.getElementById("themecust").value = localStorage.getItem("customtheme");
-        if (localStorage.getItem("theme") != "custom") {
-            document.getElementById("themecust").style.display = "none";
-        } else {
-            document.getElementById("themecust").style.display = "";
+    document.getElementById("themechng").value = localStorage.getItem("theme");
+    document.getElementById("themecust").value = localStorage.getItem("customtheme");
+    if(localStorage.getItem("theme") == undefined){
+        document.getElementById("themechng").value = "light";
+    }
+    if (localStorage.getItem("theme") != "custom") {
+        document.getElementById("themecust").style.display = "none";
+    } else {
+        document.getElementById("themecust").style.display = "";
     }
 } catch(err){}
 
