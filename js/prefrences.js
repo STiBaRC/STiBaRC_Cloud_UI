@@ -1,8 +1,12 @@
-if (localStorage.getItem('theme') == undefined) {
-    document.getElementById("themechng").value = "light";
-}else{
-    document.getElementById("themechng").value = localStorage.getItem("theme");
-}
+try {
+        document.getElementById("themechng").value = localStorage.getItem("theme");
+        document.getElementById("themecust").value = localStorage.getItem("customtheme");
+        if (localStorage.getItem("theme") != "custom") {
+            document.getElementById("themecust").style.display = "none";
+        } else {
+            document.getElementById("themecust").style.display = "";
+    }
+} catch(err){}
 
 document.getElementById("themechng").onchange = function(evt) {
     var value = document.getElementById("themechng").value;
@@ -15,10 +19,11 @@ document.getElementById("themechng").onchange = function(evt) {
     }
 }
 
-document.getElementById("themecust").onchange = function(evt) {
+document.getElementById("submit").onclick = function(evt) {
     var value = document.getElementById("themecust").value;
     localStorage.setItem("customtheme", value);
     if (value.trim() != "") {
+        console.log("e: "+value);
         loadTheme();
     }
 }
