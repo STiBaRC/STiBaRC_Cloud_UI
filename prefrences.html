@@ -5,25 +5,25 @@
         <title>STiBaRC Cloud - Prefrences</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
         <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/light.css">
+        <link rel="stylesheet" href="css/themes/light.css" id="themer">
         <link rel="icon" type="image/png" href="fav.png">
         
     </head>
     <body>
-        <div class="nav">
+<div class="nav">
             <div class="ilb">
                 <img src="SC-100x.png">
                 <a class="btn first" href="index.html">Dashboard</a>
                 <a class="btn" href="files.html">Files</a>
-                <a class="btn active" href="prefrences.html">Prefrences</a>
             </div>
             <div class="ilb right">
                 <span class="spacer"></span>
                 <div class="dropdown">
-                  <a onclick="dropDown('dd1')"><img id="pfp" class="pfp" src="https://bunnbuns.net/buna.png"></a>
-                  <div id="dd1" class="dropdown-content">
-                  <p><small>Logged in: </small>Bunnbuns</p>
-                  <a href="#">Logout</a>
+                    <a onclick="dropDown('dd1')"><img id="pfp" class="pfp" src="https://bunnbuns.net/buna.png"></a>
+                    <div id="dd1" class="dropdown-content">
+                    <p><small>Logged in: </small>Bunnbuns</p>
+                    <a class="" href="prefrences.html">Prefrences</a>
+                    <a class="red" href="#">Logout</a>
                   </div>
                 </div>
             </div>
@@ -31,22 +31,19 @@
         
         <div class="page">
             <h2>Prefrences</h2>
-            
+            <select id="themechng">
+                <option value="light">Default</option>
+                <option value="extremelight">Extreme Light</option>
+                <option value="dark">Dark</option>
+                <option value="custom">Custom theme</option>
+            </select><br />
+            <input id="themecust" type="text" style="display:none"><br/>
+            <br><button id="submit">Update</button><br><br>
         </div>
         
         
 <!--        <div class="anothercloud"></div>-->
-        <script>
-            dropDown('dd1');
-            function dropDown(id){
-                if(document.getElementById(id).style.display == "none"){
-                    document.getElementById(id).style.display = "block";
-                    document.getElementById("pfp").classList.add("active");
-                }else{
-                    document.getElementById(id).style.display = "none";
-                    document.getElementById("pfp").classList.remove("active");
-                }
-            }
-        </script>
+        <script src="js/global.js"></script>
+        <script src="js/prefrences.js"></script>
     </body>
 </html>

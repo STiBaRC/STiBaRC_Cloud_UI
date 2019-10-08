@@ -53,10 +53,10 @@ body{
     font-weight: bold;
 }
 .nav .btn.active{
-    background-color: #419fae;
+    background-color: var(--activenavbtn);
 }
-.nav .btn:hover,.nav .btn:active{
-    background-color: #419fae;
+.nav .btn:hover, .nav .btn:active{
+    background-color: var(--activenavbtn);
 }
 .nav .btn.first{
     margin-left: 8px;
@@ -111,12 +111,12 @@ body{
     margin-bottom: 10px;
     color:inherit;
     text-decoration: none;
-    background-color: var(--post);
+    background-color: var(--bio);
     color: var(--mainblobwithlisttext);
 }
 .dropdown-content a:hover{
-    color: var(--mainblobwithlist);
-    background-color: var(--header);
+    background-color: var(--post);
+    color: var(--posttext);
 
 }
 .dropdown-content small{
@@ -154,6 +154,9 @@ body{
     display: inline-block;
     font-weight: 600;
 }
-.badge.green{
+.green{
     color:darkgreen;
+}
+.red{
+    color:darkred !important;
 }
