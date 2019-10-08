@@ -23,7 +23,6 @@ document.getElementById("submit").onclick = function(evt) {
     var value = document.getElementById("themecust").value;
     localStorage.setItem("customtheme", value);
     if (value.trim() != "") {
-        console.log("e: "+value);
         loadTheme();
     }
 }

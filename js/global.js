@@ -1,3 +1,5 @@
+var projects = JSON.parse('{ "p01": { "name": "Test Project 1", "active": true }, "p02": { "name":"Another Project", "active": true }, "p03": { "name":"Diffrent Project 3", "active": false } }');
+
 dropDown('dd1');
 loadTheme();
 

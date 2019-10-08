@@ -31,23 +31,28 @@
         </div>
         
         <div class="page">
-            <h2>Files</h2>
+            <h2>Files<span id="projectName"></span></h2>
             
-            <div>
-                <span>Select project: </span>
-                <select id="files-select">
-                    <option value="project01">Test Project 01</option>
-                    <option value="project02">Another Project 02</option>
-                    <option value="project03">Diffrent Project 03</option>
-                </select>
+            <div id="projectSelect">
+                <div>
+                    <span>Select project: </span>
+                    <select id="files-select">
+<!--
+                        <option value="p01">Test Project 01</option>
+                        <option value="p02">Another Project 02</option>
+                        <option value="p03">Diffrent Project 03</option>
+-->
+                    </select>
+                </div>
+                <br>
+                <button id="files-select-btn" class="button">Go to File Manager</button>
             </div>
-            <br>
-            <button class="button">Go to File Manager</button>
             
         </div>
         
         
 <!--        <div class="anothercloud"></div>-->
         <script src="js/global.js"></script>
+        <script src="js/files.js"></script>
     </body>
 </html>
