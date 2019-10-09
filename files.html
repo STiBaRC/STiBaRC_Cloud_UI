@@ -6,6 +6,7 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/files.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/themes/light.css" id="themer">
         <link rel="icon" type="image/png" href="C2.png">
         
@@ -48,7 +49,32 @@
                 <button id="files-select-btn" class="button">Go to File Manager</button>
             </div>
             
-        </div>
+            <div id="file-manager">
+                
+                <div class="fm-nav">
+                    <span class="fm-btn-group">
+                        <a href="#" title="Parent Directory">
+                            <i class="material-icons">&#xe5d8;</i>
+                        </a>
+                    </span>
+                    <span class="fm-tree">
+                        <span id="fm-projectId"></span>/
+                    </span>
+                </div>
+                <div id="fm">
+                    <div class="fm-file">
+                        <i class="material-icons file">&#xe24d;</i>
+                        <span class="fm-text">File 01</span>
+                    </div>
+                    <div class="fm-folder">
+                        <i class="material-icons folder">&#xe2c7;</i>
+                        <span class="fm-text">Folder 01</span>
+                    </div>
+                </div>
+                
+            </div><!-- / file-manager --->
+            
+        </div><!-- / page -->
         
         
 <!--        <div class="anothercloud"></div>-->

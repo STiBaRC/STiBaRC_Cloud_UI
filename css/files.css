@@ -1,3 +1,69 @@
+h2{
+    margin-bottom: .5rem;
+}
+.material-icons{
+    vertical-align: middle;
+}
 #files-select{
+    
+}
+.fm-nav{
+    display: block;
+    background-color: var(--post);
+    padding:10px 0 12px 6px;
+    margin:1rem 0 1px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.fm-tree{
+    font-size: 95%;
+}
+.fm-btn-group{
+    display: inline-block;
+    margin: 4px 6px 4px 4px;
+}
+.fm-btn-group a{
+    color: var(--posttext);
+}
+.fm-btn-group i{
+    font-size: 1.25rem;
+    display: inline-block;
+}
+.fm-btn-group a{
+    -webkit-transition: background-color .2s ease-in-out;
+    -o-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 3px 6px 9px 5px;
+}
+.fm-btn-group a:hover{
+    background-color: var(--activenavbtn);
+}
+#fm{
+    display: block;
+    padding:0 0 8px 0;
+    border: 1px solid rgba(55, 55, 55, 0.2);
+    border-top:0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 50vh;
+}
+.fm-file, .fm-folder{
+    -webkit-transition: background-color .2s ease-in-out;
+    -o-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
+    cursor: pointer;
+    font-size: 90%;
+    border-bottom: 1px solid rgba(55, 55, 55, 0.2);
+    padding: 8px 0 8px 8px;
+}
+.fm-file:hover, .fm-folder:hover{
+    background-color: rgba(55, 55, 55, 0.15);
+}
+.fm-folder{
+    
+}
+.fm-file{
     
 }

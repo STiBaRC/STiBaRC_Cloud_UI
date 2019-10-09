@@ -28,4 +28,5 @@ document.getElementById("submit").onclick = function(evt) {
     if (value.trim() != "") {
         loadTheme();
     }
+    document.location = "index.html";
 }

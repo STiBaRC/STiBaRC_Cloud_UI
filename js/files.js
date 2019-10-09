@@ -7,12 +7,15 @@ document.getElementById("files-select-btn").onclick = function(evt) {
 }
 if(projectId != undefined){//show files for project
     document.getElementById("projectSelect").style.display = "none";
+    document.getElementById("file-manager").style.display = "";
+    // fm
     document.getElementById("projectName").innerHTML = " - "+projects[projectId].name;
-    
+    document.getElementById("fm-projectId").innerHTML = projectId;
     
     
 }else{//show select
     document.getElementById("projectName").style.display = "none";
+    document.getElementById("file-manager").style.display = "none";
      
     var select = document.getElementById("files-select");
     var projectsLength = Object.keys(projects).length;
@@ -21,7 +24,11 @@ if(projectId != undefined){//show files for project
         //create options for select
         opt = document.createElement("option");
         opt.value = projectId;
-        opt.textContent = projects[projectId].name;
+        if(projects[projectId].active){
+            opt.textContent = projects[projectId].name;
+        }else{
+            opt.textContent = "[Not Active] "+projects[projectId].name;
+        }
         select.appendChild(opt);
     }
 }
