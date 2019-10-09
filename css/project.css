@@ -1,6 +1,12 @@
 #projectTitle{
     margin-bottom: 0;
 }
-h4{
-    margin-top: .75rem;
+h1, h2, h3, h4, h5{
+    margin: .75rem 0;
+}
+#projectTitle{
+    vertical-align: middle;
+}
+span .material-icons{
+    font-size: 1.25rem !important;
 }

@@ -26,8 +26,17 @@ body{
 .vam{
     vertical-align: middle;
 }
+.nva{
+    vertical-align: baseline !important;
+}
 .b{
     display: block;
+}
+.material-icons{
+    vertical-align: middle;
+}
+.dc{
+    cursor: default;
 }
 .float-left{
     float: left;

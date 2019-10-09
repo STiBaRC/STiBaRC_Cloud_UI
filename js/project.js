@@ -3,9 +3,9 @@ var projectId = getAllUrlParams().id;
 document.getElementById("projectTitle").innerHTML = projects[projectId].name;
 document.getElementById("projectId").innerHTML = projectId;
 document.getElementById("filesLink").href = "files.html?projectId="+projectId;
-var activeTag = document.getElementById("projectStatus");
+var statusTag = document.getElementById("projectStatus");
 if(projects[projectId].active){
-        activeTag.innerHTML = '<span class="green">Active</span>';
+        statusTag.innerHTML = '<span class="green dc" title="Active"><i class="material-icons">&#xe86c;</i> </span><span class="green">Active</span> | ';
     }else{
-        activeTag.innerHTML = '<span class="red">Not Active</span>';
+        statusTag.innerHTML = '<span class="red dc" title="Not Active"><i class="material-icons">&#xe160;</i> </span><span class="red">Not Active</span> | ';
 }
