@@ -9,5 +9,5 @@ for (var i = 1; i < projectsLength+1; i++) {
         var activeTag = '<span class="badge red">Not Active</span>';
     }
     
-    myProjects.innerHTML += '<a class="page-item" href="#"> <b>'+projects[projectId].name+'</b> '+activeTag+' </a>';
+    myProjects.innerHTML += '<a class="page-item" href="project.html?id='+projectId+'"> <b>'+projects[projectId].name+'</b> '+activeTag+' </a>';
 }
