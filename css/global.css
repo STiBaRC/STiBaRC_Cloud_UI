@@ -23,8 +23,31 @@ body{
     display: inline-block;
     vertical-align: middle;
 }
+.vam{
+    vertical-align: middle;
+}
 .b{
     display: block;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.flexy-con{
+    align-items: center;
+    display: flex;
+    resize: none;
+}
+.flexy-left{
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.flexy-right{
+    
 }
 .nav{
     margin-top:15px;
