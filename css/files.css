@@ -78,6 +78,9 @@ h2{
 .fm-file{
     display: block;
 }
+.fm-file i{
+    margin-right: 5px;
+}
 .fm-text{
     display: inline-block;
     vertical-align: middle;
