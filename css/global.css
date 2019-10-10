@@ -58,6 +58,12 @@ body{
 .flexy-right{
     
 }
+hr{
+    border:none;
+    background: rgb(105,105,152);
+    background: rgba(55,55,55,.2);
+    height: 1px
+}
 .nav{
     margin-top:15px;
     display: block;
@@ -75,7 +81,7 @@ body{
 .nav a{
     color: white;
 }
-.nav .btn{
+.btn{
     display: inline-block;
     -webkit-transition: background-color .2s ease-in-out;
     -o-transition: background-color .2s ease-in-out;
@@ -84,12 +90,22 @@ body{
     padding:10px;
     text-decoration: none;
     font-weight: bold;
+    color: var(--textcolor);
 }
-.nav .btn.active{
+.btn.active{
     background-color: var(--activenavbtn);
 }
-.nav .btn:hover, .nav .btn:active{
+.btn.filled{
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    background-color: var(--body);
+}
+.btn:hover, .nav .btn:active{
     background-color: var(--activenavbtn);
+}
+.btn.filled:hover, .btn.filled:active{
+    background-color:var(--header);
 }
 .nav .btn.first{
     margin-left: 8px;
@@ -168,9 +184,11 @@ body{
     font-weight: bold;
     box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.32);
     transition: all 0.2s;
-    font-size: 12px;
     outline: 0;
     border: 0;
+}
+button.button{
+    font-size: 12px;
 }
 
 .button a {
@@ -186,7 +204,6 @@ select {
     padding: .6em 1.4em .5em .8em;
     box-sizing: border-box;
     margin: 0;
-    border: 1px solid transparent;
     border-radius: .5em;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -199,6 +216,25 @@ select {
     border: 1px solid var(--footer);
 }
 select:focus {
+    box-shadow: 0 0 2px var(--footer);
+}
+input{
+    display: inline-block;
+    font-size: .9rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 8px 10px;
+    margin: 8px 4px 8px 0;
+    box-sizing: border-box;
+    outline: 0;
+    background-color: rgba(155,155,155,0.2);
+    border:1px solid var(--footer);
+    border-radius: .5em;
+    vertical-align: middle;
+}
+input:focus, input:active {
+    background-color: white;
     box-shadow: 0 0 2px var(--footer);
 }
 /*-- page stuff --*/

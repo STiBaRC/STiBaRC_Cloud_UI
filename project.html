@@ -33,18 +33,63 @@
         </div>
         
         <div class="page">
+            
             <h2><span id="projectTitle">Loading</span></h2>
-            <h5><span id="projectStatus"><span class="red">? </span></span>(<span id="projectId">---</span>) | <span id="projectIpAddress">185.199.111.153</span></h5>
-            
+
             <div>
-                
+                <h5><span id="projectStatus"><span class="red">? </span></span> | (<span id="projectId">---</span>) | <span id="projectIpAddress">IP: 185.199.111.153</span></h5>
+            </div>
+
+            <div class="container--tabs">
+                    <ul class="nav-tabs">
+                        <li class="active"><a href="#tab-overview">Overview</a></li>
+                        <li class=""><a href="#tab-access">Access</a></li>
+                        <li class=""><a href="#tab-settings">Settings</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-overview" class="tab-pane active"> 
+                            <span>
+                                
+                                <br><br>
+                                
+                                <div>
+                                    <a id="filesLink" class="button" href="files.html">File Manager</a>
+                                </div>
+                                
+                            </span>
+                        </div> 
+                        <div id="tab-access" class="tab-pane">
+                            <span>
+                                <h3>Access</h3>
+                                <p>SSH and FTP details</p>
+                            </span>
+                        </div>
+                        <div id="tab-settings" class="tab-pane">
+                            <span>
+                                <h3>Project Name</h3>
+                                <div>
+                                    <input id="projectNameInput" placeholder="Project Name">
+                                    <button class="button">Update</button>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
             </div>
             
-            <br><br>
             
-            <div>
-                <a id="filesLink" class="button" href="files.html">Files</a>
+<!--
+            <div id="Access" class="tabcontent">
+              <h3>Access</h3>
+              <p>FTP n stuff</p> 
             </div>
+
+            <div id="Settigs" class="tabcontent">
+              <h3>Settings</h3>
+              <p>And that kind of thing</p>
+            </div>
+-->
+            
+            
             
         </div><!-- / page -->
         
