@@ -4,7 +4,7 @@ var tabUri = getAllUrlParams().tab;
 document.getElementById("projectTitle").innerHTML = projects[projectId].name;
 document.getElementById("projectNameInput").value = projects[projectId].name;
 document.getElementById("projectId").innerHTML = projectId;
-document.getElementById("filesLink").href = "files.html?projectId="+projectId;
+document.getElementById("filesLink").href = "files.html?id="+projectId;
 var statusTag = document.getElementById("projectStatus");
 if(projects[projectId].active){
         statusTag.innerHTML = '<span class="green dc" title="Active"><i class="material-icons">&#xe86c;</i> </span><span class="green">Active</span>';
