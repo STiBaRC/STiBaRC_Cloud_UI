@@ -228,7 +228,7 @@ input{
     margin: 8px 4px 8px 0;
     box-sizing: border-box;
     outline: 0;
-    background-color: rgba(155,155,155,0.2);
+    background-color: white;
     border:1px solid var(--footer);
     border-radius: .5em;
     vertical-align: middle;
