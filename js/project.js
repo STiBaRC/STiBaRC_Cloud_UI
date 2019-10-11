@@ -4,6 +4,8 @@ var tabUri = getAllUrlParams().tab;
 document.getElementById("projectTitle").innerHTML = projects[projectId].name;
 document.getElementById("projectNameInput").value = projects[projectId].name;
 document.getElementById("projectId").innerHTML = projectId;
+document.getElementById("projectIpAddress").innerHTML = projects[projectId].ip;
+document.getElementById("projectFtpAddress").value = projects[projectId].ftp;
 document.getElementById("filesLink").href = "files.html?id="+projectId;
 var statusTag = document.getElementById("projectStatus");
 if(projects[projectId].active){

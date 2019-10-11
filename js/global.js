@@ -1,4 +1,4 @@
-var projects = JSON.parse('{ "p01": { "name": "Test Project 1", "active": true }, "p02": { "name":"Another Project", "active": true }, "p03": { "name":"Diffrent Project 3", "active": false } }');
+var projects = JSON.parse('{ "p01": { "name": "Test Project 1", "active": true, "ip": "185.199.111.153", "ftp": "p01@185.199.111.153:21" }, "p02": { "name": "Another Project", "active": true, "ip": "185.199.111.153", "ftp": "p02@185.199.111.153:21" }, "p03": { "name": "Diffrent Project 3", "active": false, "ip": "185.199.111.153", "ftp": "p03@185.199.111.153:21" } }');
 
 loadTheme();
 
