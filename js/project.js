@@ -12,7 +12,19 @@ if(projects[projectId].active){
         statusTag.innerHTML = '<span class="red dc" title="Not Active"><i class="material-icons">&#xe160;</i> </span><span class="red">Not Active</span>';
 }
 
-tabLinks = document.querySelectorAll('a[id^="tab-"]');
+tabLinks = document.querySelectorAll('a[id^="tabLink-"]');
 for (i = 1; i < tabLinks.length+1; i++) {
-    document.getElementById("tab-"+i).href = 'project.html?id='+projectId+'&tab='+i;
+    document.getElementById("tabLink-"+i).href = 'project.html?id='+projectId+'&tab='+i;
+}
+if(tabUri != undefined && tabUri != ""){
+    tabContainers = document.querySelectorAll('div[id^="tab-"]');
+    for (i = 1; i < tabContainers.length+1; i++) {
+        document.getElementById("tab-"+i).style.display = "none";
+    }
+    document.getElementById("tab-"+tabUri).style.display = "block";
+    
+    for (i = 1; i < tabLinks.length+1; i++) {
+        document.getElementById("tabLi-"+i).classList.remove('active');
+    }
+    document.getElementById("tabLi-"+tabUri).classList.add('active');
 }

@@ -64,8 +64,7 @@ span .material-icons {
 .container--tabs .nav-tabs > li.active > a, .container--tabs .nav-tabs > li.active > a:hover, .container--tabs .nav-tabs > li.active > a:focus {
     cursor: default;
     background-color: var(--body);
-    border: 1px solid #ddd;
-    border-bottom-color: transparent;
+    border-bottom: 1px solid #ddd;
 }
 
 .container--tabs .tab-content {
