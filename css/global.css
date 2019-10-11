@@ -228,23 +228,23 @@ input{
     margin: 8px 4px 8px 0;
     box-sizing: border-box;
     outline: 0;
-    background-color: var(--comtent);
+    background-color: rgba(255,255,255,.03);
     color:var(--comtenttext);
     border:1px solid var(--footer);
     border-radius: .5em;
     vertical-align: middle;
 }
 input:focus, input:active {
-    background-color: var(--comtent);
+    background-color: rgba(255,255,255,.01);
     color:var(--comtenttext);
     box-shadow: 0 0 2px var(--footer);
 }
 input:-moz-read-only { /* For Firefox */
-  background-color: rgba(195,195,195,.5);
+  background-color: rgba(220, 220, 220, 0.2);
 }
 
 input:read-only {
-  background-color: rgba(195,195,195,.5);
+  background-color: rgba(220, 220, 220, 0.2)
 }
 /*-- page stuff --*/
 
