@@ -8,17 +8,18 @@ body{
     background-color: var(--body);
     min-height: 96vh;
 }
-/*
 .anothercloud{
-    opacity: .5;
+    opacity: .75;
     height: 250px;
     width:100%;
     background: url("../anothercloud.png") no-repeat bottom right;
     position: absolute;
     bottom: 0;
-    right:0;
+    right: 0;
 }
-*/
+.center{
+    text-align: center;
+}
 .ilb{
     display: inline-block;
     vertical-align: middle;
@@ -72,7 +73,7 @@ hr{
     padding:8px;
     border-radius: 10px;
 }
-.nav img{
+.nav-img{
     height: 75px;
     display: inline-block;
     margin:4px 4px 4px 8px;
