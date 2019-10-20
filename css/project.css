@@ -50,7 +50,7 @@ span .material-icons {
 }
 .container--tabs .nav-tabs > li > a {
     float: left;
-    margin-right: 2px;
+    margin-right: 4px;
     line-height: 1.42857143;
     padding: 8px 10px;
     border: 1px solid transparent;

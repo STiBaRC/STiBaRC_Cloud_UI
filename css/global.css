@@ -81,6 +81,7 @@ hr{
 }
 .nav a{
     color: white;
+    text-decoration: none;
 }
 .btn{
     display: inline-block;
@@ -121,7 +122,7 @@ hr{
 }
 .nav .pfp{
     border: 1px solid rgba(0, 0, 0, .1);
-    margin: -1px 3px;
+    margin: -1px 0;
     width:45px;
     height:45px;
     border-radius:50%;
@@ -129,8 +130,7 @@ hr{
     vertical-align: middle;
 }
 .pfp.active{
-    margin: -1px 0;
-    border: 4px rgba(255, 255, 255, 0.35) solid;
+    border: 1px rgba(255, 255, 255, 0.35) solid;
 }
 .dropdown{
     display: inline-block;
