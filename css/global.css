@@ -168,7 +168,6 @@ hr{
 .dropdown-content a:hover{
     background-color: var(--post);
     color: var(--posttext);
-
 }
 .dropdown-content small{
     color: #656565;
