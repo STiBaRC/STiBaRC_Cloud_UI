@@ -22,5 +22,9 @@
     --spinner2: #FFFFFF;
     --spinner3: #FFFFFF;
     --hrcolor: black;
-    --activenavbtn: #bdbdbd;
+    --onlitext: black;
+    --button2: #bebebe;
+    --maxmarg: auto;
+    --marginlefts: 15px;
+    --marginrights: 15px;
 }
