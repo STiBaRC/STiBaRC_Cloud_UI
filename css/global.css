@@ -178,7 +178,6 @@ hr{
 .button {
     text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
     background-color: var(--buttoncolor);
     color: var(--buttontext);
     padding: 8px;
@@ -186,8 +185,18 @@ hr{
     font-weight: bold;
     box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.32);
     transition: all 0.2s;
-    outline: 0;
-    border: 0;
+    border:none;
+    cursor: pointer;
+}
+.onli {
+    background-color: var(--footer);
+    color: var(--onlitext);
+}
+.onli:hover {
+    color: var(--onlitext);
+}
+.onli a{
+    color: var(--onlitext);
 }
 button.button{
     font-size: 12px;
@@ -198,17 +207,66 @@ button.button{
 .button:hover:disabled{
     box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.32);
 }
+.button:active:disabled{
+    box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.32);
+}
+.button:hover {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.77);
+}
+.button:focus{
+    outline: none;
+}
+.button:active{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.85);
+}
+.unsel {
+    background-color: rgba(0, 0, 0, 0.459);
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--onlitext);
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.sel {
+    background-color: var(--buttoncolor);
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--buttontext);
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.2s;
+    cursor: pointer;
+    box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.32);
+}
 .button a {
 	text-decoration: none; 
 }
-
-.button:hover {
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.77);
+input:not(.unstyle) {
+    outline: none;
+    border: 2px solid gray;
+    background-color: var(--mainblobwithlist);
+    color: var(--textcolor);
+    padding: 8px;
+    box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.32);
+    border-radius: 5px;
+    transition: all 0.2s;
 }
-select {
-    background-color: var(--body);
-    color: var(--buttontext);
-    padding: .6em 1.4em .5em .8em;
+input:not(.unstyle):focus {
+    border: 2px solid var(--body);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.77);
+}
+input:not(.unstyle):not([type="file"]):hover {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.77);
+}
+select:not(.unstyle) {
+    font-weight: bold;
+    background-color: var(--footer);
+    color: var(--onlitext);
+    padding: .75em 1.65em .75em .85em;
     box-sizing: border-box;
     margin: 0;
     border-radius: .5em;
@@ -220,36 +278,32 @@ select {
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
     outline: 0;
-    border: 1px solid var(--footer);
+    border: none;
+    box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.32);
 }
-select:focus {
-    box-shadow: 0 0 2px var(--footer);
+select:not(.unstyle):focus {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.77);
 }
-input{
-    display: inline-block;
-    font-family: inherit;
-    font-size: .9rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 8px 10px;
-    margin: 8px 4px 8px 0;
-    outline: 0;
-    background-color: rgba(255,255,255,.03);
-    color:var(--comtenttext);
-    border:1px solid var(--footer);
-    border-radius: .5em;
-    vertical-align: middle;
+textarea:not(.unstyle) {
+    outline: none;
+    border: 2px solid gray;
+    background-color: var(--mainblobwithlist);
+    color: var(--textcolor);
+    padding: 8px;
+    box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.32);
+    border-radius: 5px;
+    transition: all 0.2s;
 }
-input:focus, input:active {
-    background-color: rgba(255,255,255,.01);
-    color:var(--comtenttext);
-    box-shadow: 0 0 2px var(--footer);
+textarea:not(.unstyle):focus {
+    border: 2px solid var(--body);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.77);
+}
+textarea:not(.unstyle):hover {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.77);
 }
 input:-moz-read-only { /* For Firefox */
   background-color: rgba(220, 220, 220, 0.2);
 }
-
 input:read-only {
   background-color: rgba(220, 220, 220, 0.2)
 }
@@ -269,13 +323,14 @@ input:read-only {
 }
 .page-item{
     display: block;
-    background-color: var(--post);
-    color: var(--posttext);
+	background-color: var(--post);
+	word-wrap: break-word;
     text-decoration: none;
-    word-wrap: break-word;
-    padding: 15px;
-    border-radius: 10px;
+	padding: 10px;
+	border-radius: 10px;
     margin-bottom: 8px;
+	color: var(--posttext);
+    box-shadow: 0px 1px 5px rgba(77, 77, 77, 0.32);
 }
 .badge{
     float:right;
