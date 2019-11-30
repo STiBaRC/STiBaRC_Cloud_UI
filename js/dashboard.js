@@ -1,6 +1,6 @@
 var projectsLength = 0;
 projectsLength = Object.keys(projects).length;
-var myProjects = document.getElementById("myProjects");
+var myProjects = $("myProjects");
 if(projectsLength == 0){
     myProjects.innerHTML = '<br><center><h2>No Projects</h2></center>';
 }

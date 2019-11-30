@@ -1,23 +1,23 @@
 var projectId = getAllUrlParams().id;
 
-document.getElementById("files-select-btn").onclick = function(evt) {
-    var selectProjectId = document.getElementById("files-select").value;
+$("files-select-btn").onclick = function(evt) {
+    var selectProjectId = $("files-select").value;
     console.log(selectProjectId);
     window.location.href = "files.html?id="+selectProjectId;
 }
 if(projectId != undefined){//show files for project
-    document.getElementById("projectSelect").style.display = "none";
-    document.getElementById("file-manager").style.display = "";
+    $("projectSelect").style.display = "none";
+    $("file-manager").style.display = "";
     // fm
-    document.getElementById("projectName").innerHTML = " - "+projects[projectId].name;
-    document.getElementById("fm-projectId").innerHTML = projectId;
+    $("projectName").innerHTML = " - "+projects[projectId].name;
+    $("fm-projectId").innerHTML = projectId;
     
     
 }else{//show select
-    document.getElementById("projectName").style.display = "none";
-    document.getElementById("file-manager").style.display = "none";
+    $("projectName").style.display = "none";
+    $("file-manager").style.display = "none";
      
-    var select = document.getElementById("files-select");
+    var select = $("files-select");
     var projectsLength = Object.keys(projects).length;
     for (var i = 1; i < projectsLength+1; i++) {
         var projectId = "p0"+i;

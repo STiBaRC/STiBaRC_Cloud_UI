@@ -1,24 +1,29 @@
 var projects = JSON.parse('{ "p01": { "name": "Test Project 1", "active": true, "ip": "185.199.111.153", "ftp": "p01@185.199.111.153:21" }, "p02": { "name": "Another Project", "active": true, "ip": "185.199.111.153", "ftp": "p02@185.199.111.153:21" }, "p03": { "name": "Diffrent Project 3", "active": false, "ip": "185.199.111.153", "ftp": "p03@185.199.111.153:21" } }');
 
+function $(id) {
+	return document.getElementById(id); //less typing
+}
+
 loadTheme();
 
-//drop down thing:
-var specifiedElement = document.getElementById('dd1btn');
-
+// nav dropdown display //
+var pfpNavDropdown = $('pfpNavDropdown');
+var navDropdown = $('navDropdown');
 document.addEventListener("click", function(event) {
-    var isClickInside = specifiedElement.contains(event.target);
+    var isClickInside = pfpNavDropdown.contains(event.target);
+    var navDropdownContent = navDropdown.contains(event.target);
     
-    if(document.getElementById("dd1").style.display == "none"){
-        document.getElementById("dd1").style.display = "block";
-        document.getElementById("pfp").classList.add("active");
+    if($("navDropdown").style.display == "none" || navDropdownContent){
+        $('navDropdown').style.display = "block";
+        $('pfpNavDropdown').classList.add("active");
     }else{
-        document.getElementById("dd1").style.display = "none";
-        document.getElementById("pfp").classList.remove("active");
+        $("navDropdown").style.display = "none";
+        $("pfpNavDropdown").classList.remove("active");
     }
-    if (!isClickInside) {
-        //the click was outside the specifiedElement, do something
-        document.getElementById("dd1").style.display = "none";
-        document.getElementById("pfp").classList.remove("active");
+    if (!isClickInside && !navDropdownContent) {
+        //the click was outside the nav dropdown
+        $("navDropdown").style.display = "none";
+        $("pfpNavDropdown").classList.remove("active");
     }
 });
 
@@ -28,15 +33,15 @@ function loadTheme() {
 		if (theme != undefined) {
 			if (theme == "custom") {
 				if (localStorage.getItem('customtheme').trim() != "") {
-					document.getElementById('themer').href = localStorage.getItem('customtheme');
+					$('themer').href = localStorage.getItem('customtheme');
 				} else {
-					document.getElementById('themer').href = 'css/themes/light.css';
+					$('themer').href = 'css/themes/light.css';
 				}
 			} else {
-				document.getElementById('themer').href = 'css/themes/'+theme+".css";
+				$('themer').href = 'css/themes/'+theme+".css";
 			}
 		} else {
-			document.getElementById('themer').href = 'css/themes/light.css';
+			$('themer').href = 'css/themes/light.css';
 		}
 	} catch(err) {
 		console.error(err);
